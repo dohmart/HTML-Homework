@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Lattitude</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="custom.css">
+
+
+</head>
+
+<body>
+    
+
+    <div id ="titlebar"></div>
+
+    <br>
+
+    <div class="overview">
+        <div class="row">
+            <div class="col-lg-6">
+                <div id = "notes">
+                    <h3>Summary: Latitude vs X</h3>
+                    <p>
+                        How does latitude affect weather? What aspects of weather does it affect? The answer to these questions
+                        may be investigated by analyzing historical weather data from multiple locations around the planet. 
+                        Understanding is best gained through graphical representation of the results. 
+                    </p>
+                    <br>
+                    <p>
+                        Using data available from the OpenWeatherMap API (https://openweathermap.org/api), a dataset was assembbled
+                        from 500 randomly selected cities worldwide. Aspects of weather selected for analysis were temperature, 
+                        cloudiness, wind and humidity. The Lattitude site contains the source data, graphical representations of
+                        that data and a few thoughts on trends and correlations observed. 
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div id = "graphs"></div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+<!-- Calls to external, reusable HTML -->
+    <script>
+        $( "#graphs" ).load( "common.html #graphs_common" )
+    </script>
+
+    <script>
+        $("#titlebar").load( "common.html #titlebar_common" )
+    </script>
+
+</body>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Lattitude</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="custom.css">
+
+
+</head>
+
+<body>
+    
+
+    <div id ="titlebar"></div>
+
+    <br>
+
+    <div class="detailheader">
+            <h1> Wind speed</h1>
+            <div class="row">
+                <div class="col-lg-8 detailgraph">
+                        <a href="windspeed.html"> <img src="Resources/assets/images/Fig4.png" class="img-fluid" alt="Missing Graph"></img> </a>            <div id = "explanation">
+                        <h3>Wind speed vs Latitude</h3>
+                        <p>
+                            Wind speed may be slightly less near the equator than than in high north and south latitudes. The effect is not
+                            strong, but it looks like it is there. There is never wind greater than 15 mph at 0 Deg to -15 Deg latitude. Of course, 
+                            this data is for a single day, so it could easily be some other effect. 
+                        </p>
+                                
+                            </div>
+    
+                </div>
+                <div class="col-lg-3">
+                        <div id = "graphs"></div>
+                </div>
+            </div>
+        </div>
+    
+
+    
+
+<!-- Calls to external, reusable HTML -->
+<script>
+        $( "#graphs" ).load( "common.html #graphs_common" )
+</script>
+
+<script>
+    $("#titlebar").load( "common.html #titlebar_common" )
+</script>
+</body>
